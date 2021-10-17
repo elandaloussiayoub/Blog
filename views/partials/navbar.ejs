@@ -1,0 +1,47 @@
+<style>
+  .navbar-custom {
+    background-color: #1a505a;
+  }
+  /* change the brand and text color */
+  .navbar-custom .navbar-brand,
+  .navbar-custom .navbar-text {
+    color: #F27D42;
+    font-size: x-large;
+  }
+  /* change the link color */
+  .navbar-custom .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  /* change the color of active or hovered links */
+  .navbar-custom .nav-item.active .nav-link,
+  .navbar-custom .nav-item:hover .nav-link {
+    color: #f60c0c;
+  }
+</style>
+<nav class="navbar navbar-expand-md navbar-custom">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/home">The Crippled Forum</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/dash">Dashboard</a>
+        </li>
+        <li class="nav-item dropdown"> 
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Account
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="/ident">Log In</a></li>
+            <li><a class="dropdown-item" href="/ident">Sign Up</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

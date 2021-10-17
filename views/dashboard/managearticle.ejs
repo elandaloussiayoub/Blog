@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <%- include('../partials/dash/head') %> 
+  <title>Manage Articles</title>
+  <style>
+    .styled-table {
+      
+      width: 80%;
+      border-collapse: collapse;
+      margin: 25px 0 0 5%;
+      font-size: 0.9em;
+      font-family: sans-serif;
+      min-width: 400px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    }
+    .styled-table thead tr {
+      background-color: #009879;
+      color: #ffffff;
+      text-align: left;
+      font-weight: bold;
+    }
+    .styled-table th,
+    .styled-table td {
+      padding: 12px 15px;
+    }
+    .styled-table tbody tr {
+      border-bottom: 1px solid #dddddd;
+    }
+    .styled-table tbody tr:nth-of-type(even) {
+      background-color: #f3f3f3;
+    }
+    .styled-table tbody tr:last-of-type {
+      border-bottom: 2px solid #009879;
+    }
+  </style>
+
+</head>
+
+<body>
+
+    <div class="wrapper">
+      <%- include('../partials/dash/sidebar') %>
+      <!-- Page Content  -->
+      <div id="content">
+        <%- include('../partials/dash/topbar') %>
+            
+        <div id="mainContainer">
+          <div id="managearticle">
+            <table class="styled-table">
+              <thead>
+                <tr>
+                  <td>Title</td>
+                  <td>Date</td>
+                  <td>Read</td>
+                  <td>Edit</td>
+                  <td>Delete Article</td>
+                </tr>
+              </thead>
+              <tbody>
+                <% for( let article of articles) { %> 
+                  <tr>
+                    <td><%= article.title %></td>
+                    <td><%= article.date.toDateString() %></td>
+                    <td><a href="/article/<%= article._id %>" >Read More</a></td>
+                    <td>
+                        <button type="button" class="btn btn-warning">
+                          <a href="/article/<%= article._id %>/edit">Edit</a> 
+                        </button>
+                    </td>
+                    <td>
+                      <form action="/article/<%= article._id %>?_methode=DELETE" method="POST">
+                        <input type="submit" value="Delete" class="btn btn-danger">
+                      </form>
+                    </td>
+                  </tr>  
+                <% } %>
+              </tbody>  
+            </table>  
+          </div>
+        </div>
+
+      </div>
+    </div>
+    
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+    </script>
+</body>
+
+</html>

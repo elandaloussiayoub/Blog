@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= name %> </title>
+  <link rel="stylesheet" href="/css/ident.css">
+  <link rel="stylesheet" href="/css/footer.css">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <script src="/js/bootstrap.min.js"></script>
+  <script src="/js/jquery.min.js"></script>
+</head>
+
+
+<body>
+  <%- include('partials/navbar') %>   
+  <main>
+    <div class="parentwrapper">
+      <div class="wrapper fadeInDown">
+        <div class="login">
+          <h4>Sign Up</h4>
+        </div>
+        <div id="formContent">
+          <!-- Icon -->
+          <div class="fadeIn first">
+            <img src="/img/av2.png" id="icon" alt="User Icon" />
+          </div>
+          <!-- Login Form -->
+          <form action="http://localhost:3000/ident/signup" method="POST" name="singup" >
+            <!-- <input type="hidden" name="formInstance" value="signup" /> -->
+            <input type="text" class="fadeIn second" name="firstname" placeholder="First Name">
+            <input type="text" class="fadeIn second" name="lastname" placeholder="Last Name">
+            <input type="text" class="fadeIn second" name="username" placeholder="Username">
+            <input type="email" class="fadeIn second" name="email" placeholder="Email">
+            <input type="password" class="fadeIn third" name="password" placeholder="password">
+            <input type="submit" class="fadeIn fourth" value="Sign Up">
+          </form>    
+        </div>
+      </div>
+
+      <div class="line"></div>
+
+      <div class="wrapper fadeInDown">
+        <div class="login">
+          <p>Already a member ?</p>
+          <h4>Log In</h4>
+        </div>
+        <div id="formContent">
+          <!-- Icon -->
+          <div class="fadeIn first">
+            <img src="/img/av1.png" id="icon" alt="User Icon" />
+          </div>    
+          <!-- Login Form -->
+          <form action="http://localhost:3000/ident/login" method="POST" >
+            <input type="hidden" name="formInstance" value="login" />
+            <input type="text" class="fadeIn second" name="username" placeholder="login">
+            <input type="password" class="fadeIn third" name="password" placeholder="password">
+            <input type="submit" class="fadeIn fourth" value="Log In">
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+
+
+
+  <%- include('partials/footer')  %> 
+</body>
+</html>
