@@ -2,14 +2,14 @@
 
 Instructions :
 
-Pour preparer l'environment pour lec e projet , vous pouvez installer tout les packages utiliser 
+Pour preparer l'environment pour ce projet , vous pouvez installer tous les packages utilisé 
 avec le gestionnaire de packages NPM :
-1- Placer vous dans la repertoire du projet 
+1- Placer vous dedans le repertoire du projet 
 2- Lancer la commande suivante :
     sudo npm install
-3- Apres l'installation , vous pouvez demarer le serveur avec la commande :
+3- Après l'installation , vous pouvez démarrer le serveur avec la commande :
   node server.js
-4- La base de donnees est heberger sur le service cloud de mongoDB (atlas),est appeller dans le ficher db.js dans la repertoire controller.
+4- La base de données est heberger sur le service cloud de mongoDB (atlas),est appeller dans le ficher db.js dans la repertoire controller.
 *** Mon Setup for the data base : ***
 Using WSL ubunto v 18.04 (Windows SubSystem For Linux v2)
 Node Latest versin 14.15.3
